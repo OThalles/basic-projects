@@ -1,0 +1,13 @@
+#SE RANDOM FOR MAIOR QUE SEU NUMERO, VOCE GANHA, SE FOR MENOR, VOCE PERDE
+from random import randint
+import sys
+def num(rnd):
+ return rnd > a
+a = randint(0,100)
+rnd = int(input('Digite um número'))
+
+if num(rnd):
+    print('Você ganhou')
+else:
+    print('Você perdeu')
+print('O número era: ', a)
