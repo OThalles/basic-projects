@@ -1,0 +1,12 @@
+from random import randint
+import sys
+num = int(input('Digite um inteiro: '))
+a = randint(0,100)
+if (a==num):
+     print('Você ganhou!')
+else:
+     print('Você perdeu!')
+print('O número era:', a)
+quit()
+
+           
