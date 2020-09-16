@@ -1,0 +1,11 @@
+a = int(input('Digite o valor de Ax, mas sem o X.\n'))
+b = int(input('Digite o valor de B\n'))
+c = int(input('Digite o valor de C\n'))
+sors = input('O primeiro sinal é de:\n 1 - Soma    2 - Subtração.')
+
+if (sors=='1'):
+    print('O Resultado é: ', (b + c) / a)
+elif (sors=='2'):
+    print('O Resultado é: ', (b - c) / a)
+else:
+    print('Eu não entendi...')
