@@ -1,0 +1,21 @@
+#SE B FOR NEGATIVO O RESULTADO DO DELTA INVERTE.
+def ehPositivo(delta):
+    if b < 0:
+    	return abs(delta)
+    elif b > 0:
+        return delta
+    else:
+        return delta
+#ALGORITMO
+print('equação do 2° grau')
+print('x²-x+1=0, a = x², b = x, c = 1')
+a = int(input('De valor à a'))
+b = int(input('De valor à b'))
+c = int(input('De valor à c'))
+print('A formula é (b*b - 4*a*c)')
+delta = b**2-4*a*c
+delta2 = ehPositivo(delta)
+print(';',b,'^2-4*',a,'*',c,)
+print('delta é {}'.format(delta2))
+
+
