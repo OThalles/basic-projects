@@ -1,0 +1,25 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+import time
+#Abrir o chromedriver
+chrome = webdriver.Chrome(executable_path=r'./chromedriver.exe')
+chrome.get("https://www.4devs.com.br/gerador_de_pessoas")
+#Função para coletar os dados dos formulários
+def coletardados():
+    gerarpessoa = chrome.find_element_by_xpath('/html/body/main/div/div[2]/div/div[4]/div[1]/div[3]/label/input')
+    gerarpessoa.click()
+
+    nome = chrome.find_element_by_xpath('/html/body/main/div/div[2]/div/div[4]/div[1]/div[6]/div[1]/div[2]/div/span[1]').text
+    cpf = chrome.find_element_by_xpath('/html/body/main/div/div[2]/div/div[4]/div[1]/div[6]/div[2]/div[2]/div/span[1]').text
+    rg = chrome.find_element_by_xpath('/html/body/main/div/div[2]/div/div[4]/div[1]/div[6]/div[3]/div[2]/div/span[1]').text
+    datanasc = chrome.find_element_by_xpath('/html/body/main/div/div[2]/div/div[4]/div[1]/div[6]/div[4]/div[2]/div/span[1]').text
+    sexo = chrome.find_element_by_xpath('/html/body/main/div/div[2]/div/div[4]/div[1]/div[6]/div[5]/div[2]/div/span[1]').text
+    time.sleep(2)
+    print('Dados coletados:')
+    print('------------------------------------------------------------------')
+    print('NOME: {nome} \n CPF: {cpf} \n RG: {rg} \n Data de nascimento: {datanasc} \n Sexo: {sexo}'.format(nome=nome, cpf=cpf, rg=rg, datanasc=datanasc, sexo=sexo))
+#Loop da função
+while True:
+    coletardados()
+
